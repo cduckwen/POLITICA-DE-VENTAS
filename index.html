@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Descuentos y Financiación CNH — Ferrero Tractores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F6F5EE;
+    --paper: #FFFFFF;
+    --ink: #1D2B22;
+    --ink-soft: #4B594D;
+    --line: #DAD9C9;
+    --base: #2F5233;        /* descuento base — verde monte */
+    --base-soft: #D9E4D4;
+    --hod1: #B08628;        /* HOD1 — trigo maduro */
+    --hod1-soft: #F1E4C0;
+    --hod2: #A6472D;        /* HOD2 — tierra, requiere más aprobación */
+    --hod2-soft: #F0DAD1;
+    --warn-bg: #FBF1E8;
+    --warn-line: #D9A15C;
+    --confid-bg: #F3E4E1;
+    --confid-line: #A6472D;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:'IBM Plex Sans', sans-serif; line-height:1.5;}
+  .wrap{max-width:980px; margin:0 auto; padding:56px 28px 100px;}
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; color:var(--ink); margin:0;}
+  .kicker{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;}
+  header.hero{border-bottom:2px solid var(--ink); padding-bottom:28px; margin-bottom:24px;}
+  header.hero h1{font-size:38px; line-height:1.12; max-width:760px;}
+  header.hero .meta{margin-top:14px; font-size:15px; color:var(--ink-soft); display:flex; gap:18px; flex-wrap:wrap;}
+
+  .confidential{
+    background:var(--confid-bg); border-left:3px solid var(--confid-line);
+    padding:12px 18px; font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    color:var(--ink); margin-bottom:36px; text-transform:uppercase; letter-spacing:.03em;
+  }
+
+  section{margin-bottom:52px;}
+  section > h2{font-size:24px; margin-bottom:14px; display:flex; align-items:baseline; gap:10px;}
+  section > h2 .num{font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--hod1); font-weight:600;}
+  p{margin:0 0 14px; max-width:760px;}
+  ul.plain{margin:0 0 14px; padding-left:20px;}
+  ul.plain li{margin-bottom:6px; max-width:740px;}
+  .note{background:var(--warn-bg); border-left:3px solid var(--warn-line); padding:14px 18px; font-size:14.5px; color:var(--ink-soft); max-width:760px; margin-bottom:14px;}
+  .note strong{color:var(--ink);}
+
+  /* priority steps */
+  .steps{display:flex; flex-direction:column; gap:10px; margin-bottom:16px;}
+  .step{display:flex; align-items:flex-start; gap:16px; background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:16px 20px;}
+  .step .n{font-family:'Fraunces', serif; font-size:26px; font-weight:600; color:var(--line); flex:0 0 auto; width:34px;}
+  .step.active .n{color:var(--base);}
+  .step h3{font-size:16px; margin-bottom:4px;}
+  .step p{margin:0; font-size:14px; color:var(--ink-soft); max-width:640px;}
+  .step .badge{
+    margin-left:auto; flex:0 0 auto; font-family:'IBM Plex Mono', monospace; font-size:11px;
+    text-transform:uppercase; padding:4px 10px; border-radius:20px; align-self:center;
+  }
+  .badge.b1{background:var(--base-soft); color:var(--base);}
+  .badge.b2{background:var(--hod1-soft); color:var(--hod1);}
+  .badge.b3{background:var(--hod2-soft); color:var(--hod2);}
+
+  table{border-collapse:collapse; width:100%; margin-top:6px;}
+  th, td{text-align:left; padding:9px 11px; font-size:13.5px; border-bottom:1px solid var(--line);}
+  th{font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-soft); font-weight:600; background:#F1F0E6;}
+  tr:last-child td{border-bottom:none;}
+  td.num-cell, th.num-cell{text-align:center;}
+  .tag-total{font-weight:700; color:var(--ink);}
+
+  .pay-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(210px,1fr)); gap:14px; margin-bottom:16px;}
+  .pay-card{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:16px 18px;}
+  .pay-card h3{font-size:15.5px; margin-bottom:10px;}
+  .pay-card .stack{display:flex; flex-direction:column; gap:5px; font-size:13px; font-family:'IBM Plex Mono', monospace;}
+  .pay-card .stack .row{display:flex; justify-content:space-between;}
+  .pay-card .stack .row.total{border-top:1px dashed var(--line); margin-top:5px; padding-top:5px; font-weight:600;}
+  .pay-card .stack .base{color:var(--base);}
+  .pay-card .stack .hod1{color:var(--hod1);}
+  .pay-card .stack .hod2{color:var(--hod2);}
+
+  .action-grid{display:flex; gap:18px; flex-wrap:wrap;}
+  .action-card{flex:1 1 320px; background:var(--paper); border:1px solid var(--line); border-left:4px solid var(--hod2); border-radius:6px; padding:18px 20px;}
+  .action-card h3{font-size:16.5px; margin-bottom:8px;}
+  .action-card p{font-size:14px; color:var(--ink-soft); margin-bottom:0;}
+
+  footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--ink-soft); font-family:'IBM Plex Mono', monospace;}
+  @media (max-width:720px){ header.hero h1{font-size:28px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Ferrero Tractores · Gerencia de Ventas</div>
+    <h1>Política de descuentos y financiación CNH</h1>
+    <div class="meta">
+      <span>Ferrero Tractores S.A.</span>
+      <span>Elaborado por Carlos "Charlie" Duckwen</span>
+      <span>Base: Boletín Comercial CNH N°01 — Junio 2026</span>
+    </div>
+  </header>
+
+  <div class="confidential">⚠ Uso interno exclusivo — contiene condiciones comerciales confidenciales de CNH. No compartir fuera del equipo comercial.</div>
+
+  <section>
+    <h2><span class="num">01</span> Objetivo</h2>
+    <p>Esta es una <strong>política de venta</strong>: fija la metodología con la que se construye el precio frente al cliente, no la mecánica de ninguna herramienta puntual. El precio de lista es siempre el inicio de la charla comercial, y a partir de ahí las distintas formas de pago van habilitando descuento de forma progresiva — una cadena de libertades y aprobaciones que protege el margen del concesionario en cada negocio.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> Cadena de libertades y aprobaciones</h2>
+    <p>El precio de lista es el punto de partida de toda charla con el cliente. De ahí en adelante, el descuento se abre en capas, de menor a mayor impacto en el margen:</p>
+    <div class="steps">
+      <div class="step active">
+        <div class="n">1</div>
+        <div><h3>Precio de lista</h3><p>Primera oferta al cliente, sin excepción. El asesor nunca arranca la charla ofreciendo descuento.</p></div>
+        <span class="badge b1">Inicio de la charla</span>
+      </div>
+      <div class="step active">
+        <div class="n">2</div>
+        <div><h3>HOD2</h3><p>El tramo más chico. Se aplica primero sobre el precio de lista. Viene precargado según la forma de pago / línea de financiación elegida — el asesor puede bajarlo, nunca superarlo.</p></div>
+        <span class="badge b1">Ve y edita el asesor (solo a la baja)</span>
+      </div>
+      <div class="step active">
+        <div class="n">3</div>
+        <div><h3>HOD1</h3><p>El tramo más grande. Se aplica en cascada sobre el precio que ya quedó después de HOD2 — no se suman, es descuento compuesto. Mismo criterio: precargado por línea de financiación, el asesor solo puede bajarlo.</p></div>
+        <span class="badge b2">Ve y edita el asesor (solo a la baja)</span>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <div><h3>Desc. extra</h3><p>Tercer nivel, por fuera de HOD1/HOD2. Este sí come directamente del Descuento Base — el margen real de Berger. Requiere habilitación de Gerencia de Ventas caso por caso, nunca a criterio del asesor.</p></div>
+        <span class="badge b3">Lo habilita Gerencia de Ventas</span>
+      </div>
+    </div>
+    <div class="note"><strong>Lo que el asesor nunca ve:</strong> el Descuento Base no aparece en ningún momento de su flujo de trabajo. No puede regalarlo por error ni usarlo como argumento frente al cliente — solo trabaja con precio de lista y el margen de HOD2/HOD1 que Gerencia de Ventas le habilitó para ese negocio puntual.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Jerarquía de descuento según forma de pago</h2>
+    <p>No todas las formas de pago dejan el mismo margen disponible. De más a menos margen para el concesionario:</p>
+    <table>
+      <thead><tr><th>Orden</th><th>Forma de pago</th><th>Margen disponible</th></tr></thead>
+      <tbody>
+        <tr><td class="num-cell">1</td><td>Contado, sin usado</td><td class="status-ok" style="color:var(--base); font-weight:600;">Mayor descuento disponible</td></tr>
+        <tr><td class="num-cell">2</td><td>Crédito bancario</td><td>Segundo mayor</td></tr>
+        <tr><td class="num-cell">3</td><td>Financiación propia (Ferrero)</td><td>Empieza a perder descuento según el plazo</td></tr>
+        <tr><td class="num-cell">4</td><td>Con entrega de usado</td><td style="color:var(--hod2); font-weight:600;">El descuento disponible va desapareciendo</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13.5px; color:var(--ink-soft);">Esta jerarquía es la que define qué tan agresivo puede ser el HOD2/HOD1 precargado en cada caso — no es la misma libertad la que da un contado que la que da un usado de por medio.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Descuento Base por línea de producto</h2>
+    <p>Tope de Descuento Base vigente en el boletín de Junio 2026 (información interna, fuera del alcance del asesor):</p>
+    <table>
+      <thead><tr><th>Línea de producto</th><th class="num-cell">Descuento Base</th></tr></thead>
+      <tbody>
+        <tr><td>Cosechadoras</td><td class="num-cell tag-total">26%</td></tr>
+        <tr><td>Cabezales</td><td class="num-cell tag-total">26%</td></tr>
+        <tr><td>Tractores</td><td class="num-cell tag-total">22%</td></tr>
+        <tr><td>Pulverizadores</td><td class="num-cell tag-total">22%</td></tr>
+        <tr><td>Heno &amp; Forraje</td><td class="num-cell tag-total">20%</td></tr>
+        <tr><td>Picadoras y Cabezales</td><td class="num-cell tag-total">20%</td></tr>
+        <tr><td>Sembradoras</td><td class="num-cell tag-total">20%</td></tr>
+        <tr><td>Cosechadoras Caña</td><td class="num-cell tag-total">18%</td></tr>
+        <tr><td>Braud</td><td class="num-cell tag-total">10%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> Capas HOD1/HOD2 según forma de pago (boletín CNH)</h2>
+    <p>El HOD1 y el HOD2 que vienen precargados en cada negocio no son fijos, cambian según cómo paga el cliente:</p>
+    <div class="pay-grid">
+      <div class="pay-card">
+        <h3>Contado / Extra Convenio<br>(banco sin subsidio)</h3>
+        <div class="stack">
+          <div class="row hod2"><span>HOD2 (1°)</span><span>7%</span></div>
+          <div class="row hod1"><span>HOD1 (2°, cascada)</span><span>11%</span></div>
+          <div class="row total"><span>Techo combinado</span><span>18%</span></div>
+        </div>
+      </div>
+      <div class="pay-card">
+        <h3>Trade-In 90D<br>(entrega de usado)</h3>
+        <div class="stack">
+          <div class="row hod2"><span>HOD2 (1°)</span><span>5%</span></div>
+          <div class="row hod1"><span>HOD1 (2°, cascada)</span><span>11%</span></div>
+          <div class="row total"><span>Techo combinado</span><span>16%</span></div>
+        </div>
+      </div>
+      <div class="pay-card">
+        <h3>Wholesale 90D<br>LTV 100%</h3>
+        <div class="stack">
+          <div class="row hod2"><span>HOD2 (1°)</span><span>4%</span></div>
+          <div class="row hod1"><span>HOD1 (2°, cascada)</span><span>11%</span></div>
+          <div class="row total"><span>Techo combinado</span><span>15%</span></div>
+        </div>
+      </div>
+      <div class="pay-card">
+        <h3>Wholesale 180D<br>LTV 100%</h3>
+        <div class="stack">
+          <div class="row hod2"><span>HOD2 (1°)</span><span>1%</span></div>
+          <div class="row hod1"><span>HOD1 (2°, cascada)</span><span>11%</span></div>
+          <div class="row total"><span>Techo combinado</span><span>12%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="note"><strong>Importante:</strong> HOD1 se aplica en cascada sobre el precio que ya quedó reducido por HOD2 (descuento compuesto, no aditivo). Wholesale 180D tampoco está disponible para todas las líneas — Tractores, Pulverizadores y Cosechadoras Caña quedan afuera (N/A en el boletín).</div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Desc. extra y el piso del Descuento Base</h2>
+    <p>El Desc. extra es la única capa que toca el Descuento Base directamente, y su regla cambia drásticamente según el negocio:</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <h3>Sin usado, y contado o crédito bancario sin subsidio</h3>
+        <p>Único caso donde el Descuento Base admite un Desc. extra, con un piso automático: <strong>nunca puede quedar por debajo de 15 puntos</strong>. Ej.: Tractor (Base 22%) admite hasta 7 puntos de Desc. extra; Braud (Base 10%, ya bajo el piso) queda en 0. <strong>Excepción: Heno &amp; Forraje nunca admite Desc. extra</strong>, en ningún caso — su Descuento Base no se toca.</p>
+      </div>
+      <div class="action-card">
+        <h3>Cualquier otro caso</h3>
+        <p>Financiación propia (Ferrero), o cualquier negocio con entrega de usado: el Descuento Base es <strong>intocable</strong>, sin excepción.</p>
+      </div>
+    </div>
+    <div class="note"><strong>Válido para ambas reglas:</strong> tanto el piso de 15 puntos como la excepción de Heno &amp; Forraje admiten una excepción puntual si Lucas o Emiliano la autorizan explícitamente para ese negocio.</div>
+    <table style="margin-top:6px;">
+      <thead><tr><th>Línea</th><th class="num-cell">Descuento Base</th><th class="num-cell">Tope Desc. extra (sin usado, contado o crédito bancario s/subsidio)</th></tr></thead>
+      <tbody>
+        <tr><td>Cosechadoras / Cabezales</td><td class="num-cell">26%</td><td class="num-cell tag-total">11 pts</td></tr>
+        <tr><td>Tractores / Pulverizadores</td><td class="num-cell">22%</td><td class="num-cell tag-total">7 pts</td></tr>
+        <tr><td>Heno&amp;Forraje</td><td class="num-cell">20%</td><td class="num-cell tag-total" style="color:var(--hod2);">0 pts (excepción, nunca)</td></tr>
+        <tr><td>Picadoras y Cabezales / Sembradoras</td><td class="num-cell">20%</td><td class="num-cell tag-total">5 pts</td></tr>
+        <tr><td>Cosechadoras Caña</td><td class="num-cell">18%</td><td class="num-cell tag-total">3 pts</td></tr>
+        <tr><td>Braud</td><td class="num-cell">10%</td><td class="num-cell tag-total">0 pts</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span> Operaciones con entrega de usado: es otro negocio</h2>
+    <p>Cuando el cliente entrega un usado y paga la diferencia, <strong>no es la misma negociación</strong> que un contado, un crédito o un plan de cheques. Son dos negocios que se evalúan por separado y recién después se suman:</p>
+    <div class="action-grid">
+      <div class="action-card">
+        <h3>① Valuación del usado</h3>
+        <p>Se tasa por su propio mérito — valor de mercado / referencia de stock — <strong>independiente</strong> de cuánto descuento se le vaya a dar a la máquina nueva. No es una variable de ajuste para cerrar el negocio nuevo.</p>
+      </div>
+      <div class="action-card">
+        <h3>② Descuento sobre la unidad nueva</h3>
+        <p>La diferencia a pagar por el cliente (Nuevo − Usado) es la que entra en la columna <strong>Trade-In 90D</strong>. El Descuento Base, en este caso, queda intocable (ver sección 06).</p>
+      </div>
+    </div>
+    <div class="note">
+      <strong>Error a evitar:</strong> compensar una mala tasación del usado (pagarlo caro para cerrar) con más descuento en la unidad nueva, o viceversa. Cada pata se negocia y se aprueba por separado; sumarlas sin discriminar esconde en qué parte del negocio se está perdiendo margen.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span> Antigüedad de stock — unidades nuevas</h2>
+    <p>Variable independiente de la forma de pago: una unidad <strong>nueva</strong> (0km) que lleva mucho tiempo parada en stock puede admitir más agresividad de descuento que una de alta rotación. Es sobre unidades nuevas — no tiene relación con la lógica de usados con más de 180 días de inventario, que es un objetivo distinto.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span> Financiación retail — referencia rápida</h2>
+    <p>Herramientas de financiación bancaria vigentes (válidas para todas las líneas <strong>salvo Sembradoras</strong>, que no tienen línea de financiación retail en este boletín). El HOD que habilita cada producto varía según banco, plazo y moneda:</p>
+    <table>
+      <thead><tr><th>Banco</th><th>Producto</th><th class="num-cell">Plazo</th><th class="num-cell">TNA</th><th class="num-cell">HOD1</th><th class="num-cell">HOD2</th></tr></thead>
+      <tbody>
+        <tr><td colspan="2">Agrocanje</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">11%</td><td class="num-cell">7%</td></tr>
+        <tr><td>CNHI Capital</td><td>ST USD s/gastos s/seguro</td><td class="num-cell">1 año</td><td class="num-cell">0%</td><td class="num-cell">11%</td><td class="num-cell">1%</td></tr>
+        <tr><td>CNHI Capital</td><td>ST USD s/gastos s/seguro</td><td class="num-cell">2 años</td><td class="num-cell">0%</td><td class="num-cell">7%</td><td class="num-cell">0%</td></tr>
+        <tr><td>CNHI Capital</td><td>LT USD</td><td class="num-cell">3-5 años</td><td class="num-cell">3-6,9%</td><td class="num-cell">11%</td><td class="num-cell">0-4%</td></tr>
+        <tr><td>CNHI Capital</td><td>PCH 6 cheques mensuales</td><td class="num-cell">6 meses</td><td class="num-cell">0%</td><td class="num-cell">8%</td><td class="num-cell">0%</td></tr>
+        <tr><td>CNHI Capital</td><td>PCH 9 cheques mensuales</td><td class="num-cell">9 meses</td><td class="num-cell">0%</td><td class="num-cell">7%</td><td class="num-cell">0%</td></tr>
+        <tr><td>Santander</td><td>Prendario USD c/subsidio Opción A</td><td class="num-cell">3-6 años</td><td class="num-cell">3-6%</td><td class="num-cell">11%</td><td class="num-cell">0-4%</td></tr>
+        <tr><td>Santander</td><td>Prendario USD c/subsidio Opción B</td><td class="num-cell">3-6 años</td><td class="num-cell">5,25-8%</td><td class="num-cell">11%</td><td class="num-cell">4%</td></tr>
+        <tr><td>BNA</td><td>Prendario ARS c/subsidio R827</td><td class="num-cell">5 años</td><td class="num-cell">18%</td><td class="num-cell">7%</td><td class="num-cell">0%</td></tr>
+        <tr><td>BNA</td><td>Extra Convenio R810</td><td class="num-cell">5 años</td><td class="num-cell">6,5%</td><td class="num-cell">11%</td><td class="num-cell">7%</td></tr>
+        <tr><td>BBVA</td><td>Prendario USD c/subsidio</td><td class="num-cell">3-5 años</td><td class="num-cell">1-5%</td><td class="num-cell">9%</td><td class="num-cell">0%</td></tr>
+        <tr><td>Credicoop</td><td>Prendario USD c/subsidio</td><td class="num-cell">3-4 años</td><td class="num-cell">2-4%</td><td class="num-cell">11%</td><td class="num-cell">0%</td></tr>
+        <tr><td>Galicia</td><td>Prendario USD c/subsidio</td><td class="num-cell">3-4 años</td><td class="num-cell">4,5-5,25%</td><td class="num-cell">11%</td><td class="num-cell">0%</td></tr>
+        <tr><td>Macro</td><td>Prendario USD c/subsidio</td><td class="num-cell">3-4 años</td><td class="num-cell">4,5-9,5%</td><td class="num-cell">10%</td><td class="num-cell">0%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px; color:var(--ink-soft);">Tabla resumida — el boletín completo tiene el detalle fila por fila de BAPRO, Bancor, Bersa/NBSF, La Pampa y Patagonia, con más combinaciones de plazo. Se puede abrir el PDF original para cualquier caso puntual.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">10</span> Criterio rector: el negocio es un traje a medida</h2>
+    <p>Lucas y Emiliano construyeron esta empresa a base de buenos tratos y buenos márgenes. El rol de Gerencia de Ventas es velar por eso — filtrando el volumen de negocios que va apareciendo antes de que les llegue a ellos, para que solo suban los casos que realmente necesitan su decisión.</p>
+    <div class="note"><strong>Pendiente:</strong> definir explícitamente qué opinan Emiliano y Lucas sobre cómo Gerencia de Ventas maneja esta cadena de descuentos — punto en pausa, a retomar más adelante.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">11</span> Checklist rápido para el asesor</h2>
+    <ul class="plain">
+      <li>¿Cotizé con precio de lista como primera oferta?</li>
+      <li>¿Relevé la forma de pago del cliente antes de hablar de descuento?</li>
+      <li>¿Usé primero HOD2 y después HOD1 (en cascada), dentro de lo precargado según la línea de financiación?</li>
+      <li>Si hay usado de por medio: ¿tasé el usado por su valor real, sin mezclarlo con el descuento de la unidad nueva?</li>
+      <li>¿El HOD2/HOD1 lo apliqué sobre la diferencia Nuevo-Usado, y no sobre el total, si corresponde?</li>
+      <li>Si el negocio necesita más margen que HOD2+HOD1: ¿lo escalé a Gerencia de Ventas en vez de decidirlo solo?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">12</span> Próximos pasos</h2>
+    <ul class="plain">
+      <li>Definir el criterio concreto de tasación de usados (referencia de mercado, aging de stock, u otro método).</li>
+      <li>Cerrar qué opinan Emiliano y Lucas sobre el manejo de la cadena de descuentos (sección 10, en pausa).</li>
+      <li>Evaluar si esta lógica de descuento se puede cargar directamente en el cotizador para que calcule el techo disponible según línea + forma de pago de forma automática.</li>
+      <li>Actualizar esta política cada vez que CNH publique un nuevo boletín comercial (son mensuales).</li>
+    </ul>
+  </section>
+
+  <footer>Ferrero Tractores — Política interna de descuentos y financiación · v1 · fuente: Boletín Comercial CNH N°01, Junio 2026 · confidencial</footer>
+</div>
+</body>
+</html>
